@@ -1,0 +1,25 @@
+---
+title: "R Notebook"
+outpu
+---
+
+```{r}
+age <- as.numeric(readline(prompt="Enter your age: "))
+print(age)
+```
+
+---
+t: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code.
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*
+
+```{r}
+x <- TRUE
+y <- FALSE
+z <- NA
+
+cat(x & y, y | z, !z, "\n")
+```

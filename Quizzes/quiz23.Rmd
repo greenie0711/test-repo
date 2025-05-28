@@ -1,0 +1,25 @@
+---
+title: "quiz23"
+output: html_document
+date: "2025-05-23"
+---
+
+```{r}
+setwd("/Users/jackgreenspan/STAT201/Datasets")
+countries <- read.csv("capital_cities.csv", stringsAsFactors = FALSE)
+country_names <- c(countries[ ,1])
+
+coordinates_capital_cities <- matrix(cbind(countries$"Capital.Latitude", countries$"Capital.Longitude"), nrow = nrow(countries), ncol = 2)
+rownames(coordinates_capital_cities) <- country_names
+coordinates_washington <- matrix(as.numeric(countries[232,3:4]), nrow = nrow(countries), ncol = 2, byrow = TRUE)
+
+differences <- (coordinates_washington - coordinates_capital_cities)
+
+distanceformula <- function(vec){
+  sqrt(vec[2]^2 + vec[1]^2)
+}
+
+distances <- apply(differences, 1, distanceformula)
+names(distances) <- country_names
+print((sort(distances))[1:11])
+```

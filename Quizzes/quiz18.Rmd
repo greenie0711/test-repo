@@ -1,0 +1,39 @@
+---
+title: "quiz18"
+output: html_document
+date: "2025-05-14"
+---
+
+```{r}
+word <- "silly"
+word_len <- function(word){
+  return(nchar(word))
+}
+paste(word, "has", word_len(word), "letters")
+```
+
+```{r}
+die_simulation <- function(){
+  print(sample(1:6, 1, replace=TRUE))
+}
+
+for (i in 1:5){
+  die_simulation()
+}
+```
+
+```{r}
+
+roll_times <- 5
+size <- 6
+
+roll_die <- function(size = 6, roll_times = 1) {
+  return(sample(1:size, roll_times, replace = TRUE))
+}
+
+# Call the function and print the result
+rolls <- roll_die(size = size, roll_times = roll_times)
+paste("The average of", roll_times, ", rolling a die with", size, "sides is", mean(rolls))
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
