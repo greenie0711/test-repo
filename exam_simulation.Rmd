@@ -1,0 +1,77 @@
+---
+title: "exam_simulation"
+output: html_document
+date: "2025-06-02"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### 🔹 **Question 1: Control Flow, Loops, and Atomic Vectors**
+
+You are given a numeric vector:
+
+`nums <- c(12, 7, 5, 16, 8, 0, 23)`
+
+**Tasks:**
+
+a)  Write a `for` loop that prints whether each element is **positive**, **negative**, or **zero**.\
+
+b)  Use a `while` loop to print only the numbers in the vector that are **greater than 10**.\
+
+c)  Count how many elements in `nums` are even numbers using a `for` loop and `if` statement.
+
+------------------------------------------------------------------------
+
+### 🔹 **Question 2: Matrices and Functions**
+
+**Tasks:**
+
+a)  Create a 4x4 matrix with values from 1 to 16, filled by row.\
+
+b)  Write a function `above_threshold()` that takes a matrix and a threshold value as arguments and returns a **logical matrix** of the same size indicating which elements are greater than the threshold.\
+
+c)  Use this function to find which elements in the matrix are greater than 10.
+
+------------------------------------------------------------------------
+
+### 🔹 **Question 3: Lists and Nested Access**
+
+You are given the following list:
+
+`book <- list(   title = "R for Beginners",   author = "Jane Doe",   year = 2021,   ratings = list(good = 15, average = 5, poor = 2) )`
+
+**Tasks:**
+
+a)  Extract the title from the list.\
+
+b)  Extract the number of "average" ratings using double bracket `[[` notation.\
+
+c)  Add a new element to the list called `publisher` with the value `"DataPress"`.\
+
+d)  Write a line of code that returns the sum of all ratings.
+
+------------------------------------------------------------------------
+
+### 🔹 **Question 4: Data Frames and Apply Functions**
+
+You have the following data frame:
+
+`grades <- data.frame(   student = c("Alice", "Bob", "Charlie"),   math = c(90, 75, 85),   science = c(88, 80, 89),   english = c(92, 70, 85) )`
+
+**Tasks:**
+
+a)  Add a new column `average` containing the average of the three subjects for each student using `apply()`.\
+
+b)  Add a `grade` column where:
+
+    a)  "A" for average ≥ 90
+
+    b)  "B" for average ≥ 80 and \< 90
+
+    c)  "C" for average \< 80
+
+(Hint: use `ifelse()` or `cut()`.)\
+
+c)  Filter and return only students with a grade of "A".
